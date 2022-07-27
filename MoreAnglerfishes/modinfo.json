@@ -1,0 +1,14 @@
+{
+  "name": "More Anglerfishes",
+  "author": "Encamy",
+  "description": "Spawn anglerfishes on all islands",
+  "version": "1.0.0",
+  "license": "GNU AGPLv3",
+  "icon": "icon.png",
+  "banner": "banner.jpg",
+  "gameVersion": "1.08",
+  "requiredByAllPlayers": false,
+  "updateUrl": "https://www.raftmodding.com/api/v1/mods/YOUR-MOD-SLUG-HERE/version.txt",
+  "isModPermanent": false,
+  "excludedFiles": []
+}
