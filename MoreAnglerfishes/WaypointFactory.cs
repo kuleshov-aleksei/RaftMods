@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define MOD_DEVELOPMENT
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +19,10 @@ namespace MoreAnglerfishes
             m_currentPathTypeId++;
             m_currentPathTypeId %= m_pathsElementsCount;
             PathType pathType = (PathType)m_currentPathTypeId;
+
+#if MOD_DEVELOPMENT
             Debug.Log($"Current path type id is {m_currentPathTypeId} {pathType}");
+#endif
 
             List<Waypoint> waypoints;
             switch (pathType)
@@ -40,7 +44,9 @@ namespace MoreAnglerfishes
 
         private static List<Waypoint> CreateMRoute(Vector3 initalPosition, System.Random random, Waypoint headWaypoint, Quaternion quaternion)
         {
+#if MOD_DEVELOPMENT
             Debug.Log("Using M-route");
+#endif
             Vector3 position = initalPosition;
 
             position.z -= 4;
@@ -79,7 +85,9 @@ namespace MoreAnglerfishes
 
         private static List<Waypoint> CreateStarRoute(Vector3 initalPosition, System.Random random, Waypoint headWaypoint, Quaternion quaternion)
         {
+#if MOD_DEVELOPMENT
             Debug.Log("Using star route");
+#endif
             Vector3 position = initalPosition;
 
             position.x -= 4;
@@ -118,7 +126,9 @@ namespace MoreAnglerfishes
 
         private static List<Waypoint> CreateCircleRoute(Vector3 initalPosition, System.Random random, Waypoint headWaypoint, Quaternion quaternion)
         {
+#if MOD_DEVELOPMENT
             Debug.Log("Using circle route");
+#endif
             Vector3 position = initalPosition;
 
             position.x -= random.Next(1, 4);
@@ -135,10 +145,17 @@ namespace MoreAnglerfishes
             forthWaypoint.next = firstWaypoint;
 
             List<Waypoint> resultWaypoints = new List<Waypoint>(4);
+
             resultWaypoints.Add(firstWaypoint);
             resultWaypoints.Add(secondWaypoint);
             resultWaypoints.Add(thirdWaypoint);
             resultWaypoints.Add(forthWaypoint);
+
+            if (random.Next() % 2 == 0)
+            {
+                resultWaypoints.Reverse();
+            }
+
             return resultWaypoints;
         }
 
