@@ -6,9 +6,9 @@
   "license": "GNU AGPLv3",
   "icon": "icon.png",
   "banner": "banner.jpg",
-  "gameVersion": "1.08",
+  "gameVersion": "1.0",
   "requiredByAllPlayers": false,
-  "updateUrl": "https://www.raftmodding.com/api/v1/mods/YOUR-MOD-SLUG-HERE/version.txt",
+  "updateUrl": "https://www.raftmodding.com/api/v1/mods/more-anglerfishes/version.txt",
   "isModPermanent": false,
   "excludedFiles": []
 }
