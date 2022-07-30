@@ -9,7 +9,7 @@ for %%* in (.) do set foldername=%%~n*
 :: Creating a folder to contain temporary files for the build
 mkdir "build"
 :: Copying the solution directory in the "build" folder except ".csproj, .rmod" files and "bin, obj" folders.
-robocopy . "build" /E /XF *.csproj *.rmod /XD bin obj build build.bat
+robocopy . "build" /E /XF *.csproj *.rmod /XD bin obj build /XF build.bat
 :: Checking if a .rmod with the same name already exists and if it does, delete it.
 if exist "%foldername%.rmod" ( del "%foldername%.rmod" )
 :: Zipping the "build" folder. (.rmod are just zipped files)
