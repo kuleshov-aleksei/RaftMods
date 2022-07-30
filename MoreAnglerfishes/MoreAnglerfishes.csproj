@@ -335,7 +335,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>call cd $(SolutionDir)
+    <PostBuildEvent>call cd $(ProjectDir)
 call build.bat
 echo 🔰 =============== 🔰 MOD BUILD SCRIPT 🔰 =============== 🔰
 echo ✔️ Mod successfully built as $(SolutionDir)$(ProjectName).rmod ✔️

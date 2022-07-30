@@ -28,7 +28,7 @@ namespace MoreAnglerfishes
     public class Landmark_CreateEntity_Patch
     {
         // Exclusive upper bound
-        private const int MAXIMUM_ANGLERFISHES_PER_LANDMARK = 3;
+        private const int MAXIMUM_ANGLERFISHES_PER_LANDMARK = 4;
         private const int MINUMUM_ANGLERFISHES_PER_LANDMARK = 1;
         private const int MAX_AVAILABLE_LOCATIONS = 20;
         private const int RANDOM_SEED = 42069;
